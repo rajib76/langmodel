@@ -1,0 +1,10 @@
+python-dotenv
+cohere
+umap-learn
+altair
+matplotlib
+datashader
+bokeh
+holoviews
+scikit-image
+colorcet

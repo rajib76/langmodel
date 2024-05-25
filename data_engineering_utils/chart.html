@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a199ed3d9e77e278c78d59b66a5791ae"}, "mark": {"type": "circle", "size": 60}, "encoding": {"tooltip": [{"field": "text", "type": "nominal"}], "x": {"field": "x", "scale": {"zero": false}, "type": "quantitative"}, "y": {"field": "y", "scale": {"zero": false}, "type": "quantitative"}}, "height": 400, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json", "datasets": {"data-a199ed3d9e77e278c78d59b66a5791ae": [{"text": "When was tripura admitted to India?", "x": 14.862654685974121, "y": 4.63297700881958}, {"text": "Tripura merged with India in 1949 and was designated as a 'Part C State' (union territory)", "x": 13.962082862854004, "y": 4.022242546081543}, {"text": "Tripura became a full-fledged state of India in 1972", "x": 14.617552757263184, "y": 3.988450765609741}, {"text": "My name is Tripura, I was admitted to Indian Academy of Sports in 1979", "x": 7.890203952789307, "y": -9.664173126220703}, {"text": "My name is Tripura, I got admitted to Indian national academy of fine arts in 1980", "x": 7.475181579589844, "y": -10.079174995422363}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
