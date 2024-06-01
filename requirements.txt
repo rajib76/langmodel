@@ -8,3 +8,12 @@ bokeh
 holoviews
 scikit-image
 colorcet
+langchain-core
+langchain_experimental
+openai
+langchain
+langchain-community
+langchain-openai
+neo4j
+json-repair
+langchain-groq
